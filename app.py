@@ -20,6 +20,8 @@ _cj = Formatter(indent_spaces=2, max_inline_length=120).serialize
 
 _token_cache = {"value": None, "exp": 0.0}
 
+
+
 def get_token():
     now = time.time()
     if _token_cache["value"] and now < _token_cache["exp"] - 60:
@@ -129,5 +131,6 @@ def chat():
     return jsonify({"status": "ok"}), 200
 
 if __name__ == "__main__":
+    logger.info("Starting app")
     port = int(os.environ.get("PORT", "8000"))
     app.run(host="0.0.0.0", port=port)
