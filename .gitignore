@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+venv*/
+env*/
+
+# VS Code
+.vscode/
+.history/
+
+# JetBrains (IntelliJ, PyCharm, IDEA, etc.)
+.idea/
+*.iml
+out/
+cmake-build-*/
+.gradle/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Azure deployment artifacts
+.azure/
