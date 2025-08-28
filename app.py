@@ -2,7 +2,6 @@ from flask import Flask, request, Response
 import os
 from collections import deque
 from threading import Lock
-import json
 from compact_json import Formatter
 
 app = Flask(__name__)
@@ -22,8 +21,15 @@ def chat():
     payload = request.get_json(silent=True)
     if payload is None:
         return {"error": "Expected JSON body"}, 400
+
+    entry = {
+        "headers": dict(request.headers),
+        "body": payload
+    }
+
     with _lock:
-        _messages.append(payload)
+        _messages.append(entry)
+
     return {"status": "ok"}, 200
 
 @app.get("/")

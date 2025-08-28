@@ -1,0 +1,32 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
+    "version": "1.0.0",
+    "id": "f407455a-8aac-4071-ba50-3954e6d7532f",
+    "packageName": "com.example.reggie.bot",
+    "developer": {
+      "name": "Reggie",
+      "websiteUrl": "https://example.com",
+      "privacyUrl": "https://example.com/privacy",
+      "termsOfUseUrl": "https://example.com/terms"
+    },
+    "name": { "short": "Reggie Bot", "full": "Reggie Bot" },
+    "description": {
+      "short": "Test bot",
+      "full": "Test bot for Teams that replies with streaming placeholder messages"
+    },
+    "icons": { "color": "color.png", "outline": "outline.png" },
+    "accentColor": "#6264A7",
+    "bots": [
+      {
+        "botId": "f407455a-8aac-4071-ba50-3954e6d7532f",
+        "scopes": ["personal", "team", "groupchat"],
+        "supportsFiles": false,
+        "isNotificationOnly": false
+      }
+    ],
+    "validDomains": [
+      "your-bot-hostname.example.com",
+      "webchat.botframework.com"
+    ]
+  }
